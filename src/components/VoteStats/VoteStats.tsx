@@ -1,9 +1,8 @@
 import type { Votes } from '../../types/votes'
-import Notification from '../Notification/Notification';
 import styles from './VoteStats.module.css'
 
 
-interface VoteStatsProps {
+export interface VoteStatsProps {
     votes: Votes;
     totalVotes: number
     positiveRate: number
@@ -12,9 +11,6 @@ interface VoteStatsProps {
 
 function VoteStats({ votes, totalVotes, positiveRate }: VoteStatsProps) {
 
-    if (totalVotes === 0) {
-        return <Notification/>
-    }
     
     return (
         <div className={styles.container}>
